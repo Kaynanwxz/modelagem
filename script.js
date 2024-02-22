@@ -104,6 +104,15 @@ function mover(direcao) {
     default:
       break;
   }
+  if (x >= (window.innerHeight - 88)) {
+    x = 0;
+  }else if (y >= (window.innerWidth - 88)) {
+    y = 0;
+  }else if (x < 0) {
+    x = (window.innerHeight - 88);
+  }else if (y < 0) {
+    y = (window.innerWidth - 88);
+  }
 }
 
 setInterval(() => {
