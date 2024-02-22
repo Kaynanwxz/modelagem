@@ -1,9 +1,15 @@
 let box = document.getElementById("box");
 let deg = 0;
-let cima = 500;
-let left = 800;
+let x = window.innerHeight/2;
+let y = window.innerWidth/2;
+let altura = box.style.height;
+let largura = box.style.width;
 let aleatorio = false;
 let formato = 1;
+
+box.style.top = `${x - altura}px`;
+box.style.left = `${y - largura}px`;
+
 
 document.addEventListener("keydown", function (event) {
   switch (event.key) {
@@ -38,16 +44,16 @@ document.addEventListener("keydown", function (event) {
       }
       break;
     case "ArrowRight":
-        girar('direita')
+      girar("direita");
       break;
     case "ArrowLeft":
-        girar('esquerda')
+      girar("esquerda");
       break;
 
     default:
       break;
   }
-  console.log(event.key);
+
 });
 
 function forma(formato) {
@@ -79,31 +85,29 @@ function girar(direcao) {
 function mover(direcao) {
   switch (direcao) {
     case "frente":
-      cima -= 4;
-      box.style.top = `${cima}px`;
+      x -= 8;
+      box.style.top = `${x}px`;
 
       break;
     case "tras":
-      cima += 4;
-      box.style.top = `${cima}px`;
-
+      x += 8;
+      box.style.top = `${x}px`;
 
       break;
     case "direita":
-      left += 4;
-      box.style.left = `${left}px`;
-
+      y += 8;
+      box.style.left = `${y}px`;
 
       break;
     case "esquerda":
-      left -= 4;
-      box.style.left = `${left}px`;
-
+      y -= 8;
+      box.style.left = `${y}px`;
 
       break;
     default:
       break;
   }
+
   if (x >= (window.innerHeight - 88)) {
     x = 0;
   }else if (y >= (window.innerWidth - 88)) {
