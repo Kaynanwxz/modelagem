@@ -65,12 +65,12 @@ function forma(formato) {
 function girar(direcao) {
   switch (direcao) {
     case "direita":
-      box.style.transform = `rotate(${deg + 1}deg)`;
       deg += 4;
+      box.style.transform = `rotate(${deg + 1}deg)`;
       break;
     case "esquerda":
-      box.style.transform = `rotate(${deg - 1}deg)`;
       deg -= 4;
+      box.style.transform = `rotate(${deg - 1}deg)`;
       break;
     default:
       break;
@@ -79,22 +79,26 @@ function girar(direcao) {
 function mover(direcao) {
   switch (direcao) {
     case "frente":
-      box.style.top = `${cima - 1}px`;
       cima -= 4;
+      box.style.top = `${cima}px`;
+
       break;
     case "tras":
-      box.style.top = `${cima + 1}px`;
       cima += 4;
+      box.style.top = `${cima}px`;
+
 
       break;
     case "direita":
-      box.style.left = `${left + 1}px`;
       left += 4;
+      box.style.left = `${left}px`;
+
 
       break;
     case "esquerda":
-      box.style.left = `${left - 1}px`;
       left -= 4;
+      box.style.left = `${left}px`;
+
 
       break;
     default:
