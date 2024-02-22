@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modelagem</title>
+</head>
+<body>
+
+        <div class="conteudo">
+            <div id="box" class="box">
+
+            </div>
+            <div class="botoes">
+                <div class="formato">
+                    <h2>Formato</h2>
+                    <button onclick="forma('quadrado')" type="button">Quadrado</button>
+                    <button onclick="forma('circulo')" type="button">Circulo</button>
+                </div>
+                <div class="virar">
+                    <h2>Virar para</h2>
+                    <button onclick="girar('esquerda')" type="button">esquerda</button>
+                    <button onclick="girar('direita')" type="button">direita</button>
+                </div>
+                <div class="ir">
+                    <h2>Ir para</h2>
+                    <button onclick="mover('frente')" type="button">cima</button>
+                    <button onclick="mover('tras')" type="button">baixo</button>
+                    <button onclick="mover('esquerda')" type="button">esquerda</button>
+                    <button onclick="mover('direita')" type="button">direita</button>
+                </div>
+                <div class="cor">
+                    <h2>escolha a cor</h2>
+                    <input onclick="cor()" type="color" name="" id="color">
+                    <button onclick="color()" type="button">cor aleatoria</button>
+                </div>
+            </div>
+        </div>  
+
+
+    <script src="script.js"></script>
+</body>
+</html>
